@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
                 User user = new User(tempName, tempSurname);
 
-                myRef.setValue(user);
+             //   myRef.setValue(user);
                 myRef.push().setValue(user);
 
 
