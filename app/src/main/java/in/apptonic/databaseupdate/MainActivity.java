@@ -1,11 +1,12 @@
 package in.apptonic.databaseupdate;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button submit;
     TextView nameDisplay;
     TextView surnameDisplay;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +42,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 User data = dataSnapshot.getValue(User.class);
-                nameDisplay.setText(data.name.toString());
-                surnameDisplay.setText(data.surname.toString());
+                    nameDisplay.setText(data.name);
+                    surnameDisplay.setText(data.surname);
+
+                Toast.makeText(getApplicationContext(), "database updated", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -61,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
                 User user = new User(tempName, tempSurname);
 
                 myRef.setValue(user);
+                myRef.push().setValue(user);
+
+
 
             }
         });
