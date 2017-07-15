@@ -7,56 +7,64 @@
     tools:context="in.apptonic.databaseupdate.MainActivity">
 
     <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
         android:background="@android:color/holo_blue_dark"
-        android:elevation="3dp"
+        android:baselineAligned="false"
+        android:elevation="9dp"
         android:orientation="vertical"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:baselineAligned="false">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
             android:id="@+id/name"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
             android:layout_weight="1"
             android:text="Name" />
 
         <EditText
             android:id="@+id/upper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="10dp"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="@string/name"
             android:inputType="textPersonName"
-            android:singleLine="true" />
+            android:maxLines="1"
+            android:singleLine="false"
+            android:textAlignment="viewStart"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/surname"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Surname" />
 
         <EditText
             android:id="@+id/lower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="10dp"
             android:layout_weight="1"
             android:ems="10"
+            android:hint="Surname"
             android:inputType="textPersonName"
-            android:singleLine="true" />
+            android:maxLines="1"
+            android:singleLine="false"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/Update"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="10dp"
             android:layout_weight="1"
             android:padding="0dp"
             android:text="Submit"
@@ -64,17 +72,19 @@
 
         <TextView
             android:id="@+id/displayName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
             android:id="@+id/displaySurname"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
